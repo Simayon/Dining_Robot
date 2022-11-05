@@ -17,19 +17,7 @@ function setup() {
   translate(height/2,width/2);
 }
 
-
-
-var pos;                               //handles 
-var i=0;
-var resolution = 0.05;                 //1 pixel = 2 m
-var aX =0;
-var bY =0;
-var aY = 0;
-var bY =0;
-var hypotenuse =0;
-
-
-
+var resolution = 0.05;                 //1 meter = 1 pixels
 
 function draw() {
   
@@ -41,11 +29,6 @@ function draw() {
       point(waypointsX[i], waypointsY[i]);
       strokeWeight(2);
       line(waypointsX[i-1],waypointsY[i-1],waypointsX[i], waypointsY[i])
-
-      strokeWeight(3)
-      
-      for(var j = waypointsX[j])
-
 
     }
 }
@@ -59,8 +42,8 @@ function mouseClicked() {
   waypointsX.push(mouseX);
   waypointsY.push(mouseY);
 
-  print(""+waypointsX)
-  print(""+waypointsY)
+  print("("+waypointsX[waypointsX-1]+",")
+  print(waypointsY[waypointsY-1]+")")
   // prevent default
   return false;
   }
